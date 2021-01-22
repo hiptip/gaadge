@@ -9,36 +9,6 @@ body {
 }
 
 
-#gaadge {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3%;
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-}
-
-
-
-#album-static {
-    display: block;
-    margin: auto;
-    /* margin-bottom: 3%; */
-    width: auto;
-    height: 400px;
-    filter: drop-shadow(5px 5px 10px rgb(26, 26, 26));
-}
-
-
-#date-static {
-    position: absolute;
-    top: 150px;
-    z-index: -1;
-}
-
-
-
 footer {
     position: fixed;
     left: 0;
@@ -54,9 +24,10 @@ i {
 
 /* Site Background 1 */
 
+@media only screen and (max-device-width: 350px) {
 
-@media only screen and (max-device-width: 900px) {
     #gaadge {
+        /* position: fixed; */
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -72,17 +43,94 @@ i {
         left: 50%;
         /* bring your own prefixes */
         transform: translate(-50%, -50%);
-        max-width: 320px;
+        max-width: 250px;
         height: auto;
         filter: drop-shadow(5px 5px 10px rgb(26, 26, 26));
     }
 
     #date-static {
         position: fixed;
-        top: 50%;
-        transform: rotate(20deg);
+        width: 300px;
+        height: auto;
+        float: center;
+        top: 60%;
+        left: 15%;
+        transform: rotate(28deg);
 
     }
     
     
   }
+
+
+@media only screen and (min-device-width: 350px) {
+
+    #gaadge {
+        /* position: fixed; */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    #album-static {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        max-width: 300px;
+        height: auto;
+        filter: drop-shadow(5px 5px 10px rgb(26, 26, 26));
+    }
+
+    #date-static {
+        position: fixed;
+        width: 450px;
+        height: auto;
+        float: center;
+        top: 60%;
+        transform: rotate(28deg);
+
+    }
+    
+    
+  }
+
+  
+
+@media only screen and (min-device-width: 600px) {
+
+    #gaadge {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+
+
+    #album-static {
+        display: block;
+        margin: auto;
+        /* margin-bottom: 3%; */
+        max-width: unset;
+        width: auto;
+        height: 400px;
+        filter: drop-shadow(5px 5px 10px rgb(26, 26, 26));
+    }
+
+
+    #date-static {
+        position: absolute;
+        top: 150px;
+        transform: unset;
+        z-index: -1;
+    }
+}
