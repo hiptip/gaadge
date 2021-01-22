@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function playSong() {
+      var song = document.getElementById("playAudio");
+      if (!song.paused) {
+        song.pause();
+      } else {
+        song.play();
+      }
+    }
+    
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="gaadge-logo">
+      <img id="gaadge" src="assets/gaadge-logo.png" alt="Gaadge Logo">
+    </div>
+  </header>
+  <div class="image-date">
+      <img onclick="playSong(this)" id="album-static" src="assets/yeah-static.gif">
+      <img id="date-static" src="assets/date.png">
+  </div>
+  <footer>
+    <a href="https://www.facebook.com/gaadge/" target="_blank">
+      <i class="fa fa-facebook fa-2x"></i>
+    </a>
+    <a href="https://www.instagram.com/gaadge_pgh/" target="_blank">
+      <i class="fa fa-instagram fa-2x"></i>
+    </a>
+    <a href="https://twitter.com/gaadgepgh" target="_blank">
+      <i class="fa fa-twitter fa-2x"></i>
+    </a>
+    <a href="https://gaadge.bandcamp.com" target="_blank">
+      <i class="fa fa-bandcamp fa-2x"></i>
+    </a>
+  </footer>
+  <audio loop id="playAudio">
+    <source src="assets/twenty-two.mp3" type="audio/mpeg">
+  </audio>
+</body>
+
+</html>

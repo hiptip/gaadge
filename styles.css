@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background: url(assets/background.png) no-repeat center center fixed;
+    background-size: cover; 
+}
+
+
+#gaadge {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+
+
+#album-static {
+    display: block;
+    margin: auto;
+    /* margin-bottom: 3%; */
+    width: auto;
+    height: 400px;
+    filter: drop-shadow(5px 5px 10px rgb(26, 26, 26));
+}
+
+
+#date-static {
+    position: absolute;
+    top: 150px;
+}
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+i {
+    color: white;
+    width: 45px;
+}
+
+/* Site Background 1 */
+
+
+@media only screen and (max-device-width: 900px) {
+    #gaadge {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    #album-static {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        max-width: 320px;
+        height: auto;
+        filter: drop-shadow(5px 5px 10px rgb(26, 26, 26));
+    }
+
+    #date-static {
+        position: fixed;
+        top: 50%;
+        transform: rotate(20deg);
+
+    }
+    
+    
+  }
