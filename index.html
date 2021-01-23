@@ -14,34 +14,46 @@
         song.play();
       }
     }
-    
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
   </script>
 </head>
 
 <body>
-  <header>
-    <div class="gaadge-logo">
+  <div class="grid-container">
+    <div class="item1">
       <img id="gaadge" src="assets/gaadge-logo.png" alt="Gaadge Logo">
     </div>
-  </header>
-  <div class="image-date">
-      <img onclick="playSong(this)" id="album-static" src="assets/yeah-static.gif">
+    <div class="item2">
       <img id="date-static" src="assets/date.png">
+    </div>
+    <div class="item3">
+      <img onclick="playSong(this)" id="album-static" src="assets/yeah-static.gif">
+    </div>  
+    <div class="item4"></div>
+    <div class="item5">
+      <footer>
+        <a href="https://www.facebook.com/gaadge/" target="_blank">
+          <i class="fa fa-facebook fa-3x"></i>
+        </a>
+        <a href="https://www.instagram.com/gaadge_pgh/" target="_blank">
+          <i class="fa fa-instagram fa-3x"></i>
+        </a>
+        <a href="https://twitter.com/gaadgepgh" target="_blank">
+          <i class="fa fa-twitter fa-3x"></i>
+        </a>
+        <a href="https://gaadge.bandcamp.com" target="_blank">
+          <i class="fa fa-bandcamp fa-3x"></i>
+        </a>
+      </footer>
+    </div>
   </div>
-  <footer>
-    <a href="https://www.facebook.com/gaadge/" target="_blank">
-      <i class="fa fa-facebook fa-2x"></i>
-    </a>
-    <a href="https://www.instagram.com/gaadge_pgh/" target="_blank">
-      <i class="fa fa-instagram fa-2x"></i>
-    </a>
-    <a href="https://twitter.com/gaadgepgh" target="_blank">
-      <i class="fa fa-twitter fa-2x"></i>
-    </a>
-    <a href="https://gaadge.bandcamp.com" target="_blank">
-      <i class="fa fa-bandcamp fa-2x"></i>
-    </a>
-  </footer>
+  
   <audio loop id="playAudio">
     <source src="assets/twenty-two.mp3" type="audio/mpeg">
   </audio>
